@@ -25,9 +25,9 @@ class BooksController < ApplicationController
   end
 
   def update
-      blog = Blog.find(params[:id])
-      blog.update(blog_params)
-      redirect_to blog_path(blog)
+      book = Book.find(params[:id])
+      book.update(book_params)
+      redirect_to book_path(book)
   end
   private
   def book_params
