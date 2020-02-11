@@ -32,7 +32,12 @@
     <h2>New book</h2>
 
     <%= form_for(@book) do |f| %>
-
+          <% if @book.errors.any? %>
+          <ul>
+            <li>Title can't be blank</li>
+            <li>Body can't be blank</li>
+          </ul>
+          <% end %>
         <h4>Title</h4>
         <%= f.text_field :title %>
 
